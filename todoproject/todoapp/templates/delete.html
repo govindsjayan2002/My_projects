@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: absolute;
+}
+.alert {
+  padding: 20px;
+  background-color: #3399ff;
+  color: white;
+}
+</style>
+<form method="POST">
+    {% csrf_token %}
+    <P class="alert" style="font-size:30px;">Are you want to Done?</P>
+    <button class="button" type="submit">Confirm</button>
+</form>
+{% endblock %}
